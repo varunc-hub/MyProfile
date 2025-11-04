@@ -351,7 +351,7 @@
         </div>
       </div>
     </section>
-    <!-- Admin login -->
+    <!-- Admin login 
     <form id="loginForm" class="card" style="margin-bottom:12px;">
       <label>Admin password
         <input type="password" id="adminPassword" required />
@@ -359,42 +359,42 @@
       <button class="btn primary" type="submit">Log in</button>
       <button class="btn" type="button" id="logoutBtn" style="display:none;">Log out</button>
       <small class="muted" id="loginStatus" style="display:block;margin-top:6px;"></small>
-    </form>
+    </form>-->
 
-    <!-- Admin upload (hidden until authed) -->
+    <!-- Admin upload (hidden until authed) 
     <form id="uploadForm" class="card" style="margin-bottom:12px; display:none;">
       <label>Upload images to /assets (jpg, png, webp)
         <input type="file" id="imageInput" accept="image/*" multiple required />
       </label>
       <button class="btn primary" type="submit">Upload</button>
       <small class="muted" id="uploadStatus" style="display:block;margin-top:6px;"></small>
-    </form>
+    </form>-->
 
     <!-- GALLERY -->
-    <!-- <section id="gallery" class="section alt">
-      <div class="container">
-        <h2>Photo Gallery</h2>
-        <p class="muted">Add images to <code>/assets</code> and list them in <code>script.js</code>.</p>
-        <input type="file" id="imageUpload" accept="image/*" multiple style="margin-bottom: 1rem;">-->
-        <div class="gallery" id="galleryGrid" aria-live="polite"></div>
-      <!--</div>
-    </section>-->
+   <section id="gallery" class="section alt">
+    <div class="container">
+      <h2>Photo Gallery</h2>
+      <p class="muted">Add images to <code>/assets</code> and list them in <code>script.js</code> (galleryImages array).</p>
 
-    <!-- Lightbox (add just before </main> or </body>) -->
-    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-hidden="true">
-      <div class="lightbox-inner">
-        <img id="lightboxImg" class="lightbox-img" alt="" />
-        <div class="lightbox-bar">
-          <span id="lightboxCaption" class="lightbox-caption"></span>
-          <div>
-            <button class="lightbox-btn" id="lbPrev" aria-label="Previous image">←</button>
-            <button class="lightbox-btn" id="lbNext" aria-label="Next image">→</button>
-            <button class="lightbox-btn" id="lbClose" aria-label="Close">✕</button>
-          </div>
+      <!-- (No login, no upload—pure static) -->
+      <div class="gallery" id="galleryGrid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-hidden="true">
+    <div class="lightbox-inner">
+      <img id="lightboxImg" class="lightbox-img" alt="" />
+      <div class="lightbox-bar">
+        <span id="lightboxCaption" class="lightbox-caption"></span>
+        <div>
+          <button class="lightbox-btn" id="lbPrev" aria-label="Previous image">←</button>
+          <button class="lightbox-btn" id="lbNext" aria-label="Next image">→</button>
+          <button class="lightbox-btn" id="lbClose" aria-label="Close">✕</button>
         </div>
       </div>
     </div>
-
+  </div>
     <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container grid-2">

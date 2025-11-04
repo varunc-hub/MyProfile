@@ -115,26 +115,41 @@ ul.list { margin:0; padding-left: 1rem; }
 @media (max-width: 900px){ .cards-3 { grid-template-columns: 1fr; } }
 
 /* Masonry Gallery */
+/* === Uniform Grid Gallery === */
 .gallery {
-  column-count: 3;
-  column-gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive grid */
+  gap: 16px;
+  justify-items: center;
+  align-items: center;
 }
-@media (max-width: 900px){ .gallery { column-count: 2; } }
-@media (max-width: 600px){ .gallery { column-count: 1; } }
 
 .gallery figure {
-  display: inline-block;           /* critical for masonry columns */
   width: 100%;
-  margin: 0 0 12px;
-  break-inside: avoid;             /* prevent breaking across columns */
+  aspect-ratio: 1 / 1; /* makes each cell a perfect square */
+  margin: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
+
 .gallery img {
   width: 100%;
-  height: auto;
-  border-radius: .65rem;
-  border: 1px solid var(--border);
+  height: 100%;
+  object-fit: cover;   /* fills the box, cropping excess edges */
   display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.gallery img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 
 /* Lightbox */
 .lightbox {

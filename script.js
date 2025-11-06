@@ -209,3 +209,27 @@ document.addEventListener('keydown', (e) => {
 
 /* ---------- Init ---------- */
 document.addEventListener('DOMContentLoaded', renderGallery);
+
+// Mailto submit: includes the user's email in the final message
+(function contactFormInit(){
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('cfName')?.value.trim() || '';
+    const email = document.getElementById('cfEmail')?.value.trim() || '';
+    const msg = document.getElementById('cfMessage')?.value.trim() || '';
+
+    const to = 'varun.chaubey@queensu.ca'; // your inbox
+    const subject = `Portfolio contact from ${name || 'Website visitor'}`;
+    const body =
+`Name: ${name}
+Email: ${email}
+
+${msg}`;
+
+    const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  });
+})();
+

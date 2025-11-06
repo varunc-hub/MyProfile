@@ -401,24 +401,24 @@
           <p>Open to collaborations, speaking, and impactful work.</p>
           <ul class="kv">
             <li><span>Email</span><span><a href="mailto:varun.chaubey@queensu.ca">varun.chaubey@queensu.ca</a></span></li>
-            <li><span>LinkedIn</span><span><a href="https://www.linkedin.com/in/varun-chaubey">https://www.linkedin.com/in/varun-chaubey/</a></span></li>
+            <li><span>LinkedIn</span><span><a href="https://www.linkedin.com/in/varun-chaubey">LinkedIn</a></span></li>
             <li><span>YouTube</span><span><a href="#">@JavaAlgoWizard</a></span></li>
             <li><span>Location</span><span>Toronto, Canada</span></li>
           </ul>
         </div>
-        <form class="card contact" name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact">
-          <label> Name
-            <input type="text" name="name" required />
+        <form id="contactForm" class="card">
+          <label>Name
+            <input type="text" id="cfName" name="name" required>
           </label>
-          <label> Email
-            <input type="email" name="email" required />
+          <label>Email
+            <input type="email" id="cfEmail" name="email" required>
           </label>
-          <label> Message
-            <textarea name="message" rows="4" required></textarea>
+          <label>Message
+            <textarea id="cfMessage" name="message" rows="5" required></textarea>
           </label>
           <button class="btn primary" type="submit">Send</button>
         </form>
+
       </div>
     </section>
 
